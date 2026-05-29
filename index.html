@@ -14,19 +14,19 @@
       rel="stylesheet"
     />
 
-    <!-- Prevents 404 github page -->
+    <!-- Redirect Script -->
     <script type="text/javascript">
-      let l = window.location;
-      if (l.search) {
-        let q = new URLSearchParams(l.search);
-        if (q.has('p')) {
-          // Replace the URL in the browser bar without reloading the page
-          window.history.replaceState(null, null, q.get('p') + l.hash);
-        }
+      // Get the full redirect path from sessionStorage.
+      const redirect = sessionStorage.redirect;
+      // Clear the stored path.
+      delete sessionStorage.redirect;
+      // If a redirect path exists, use it to update the history.
+      if (redirect) {
+        window.history.replaceState(null, null, redirect);
       }
     </script>
-    <script type="module" crossorigin src="/blair/assets/index-B2Ieyigu.js"></script>
-    <link rel="stylesheet" crossorigin href="/blair/assets/index-CXDPH3ci.css">
+    <script type="module" crossorigin src="/blair/assets/index-CkZpETwr.js"></script>
+    <link rel="stylesheet" crossorigin href="/blair/assets/index-C_ScXSqr.css">
   </head>
   <body>
     <div id="root"></div>

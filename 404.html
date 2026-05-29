@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Blair - Redirecting...</title>
+    <script type="text/javascript">
+      // Store the full path including the base path and any query parameters.
+      // For example, /blair/passive-buffs?search=abc
+      sessionStorage.redirect = location.pathname + location.search;
+
+      // Redirect to the root of your app.
+      location.replace('/blair/');
+    </script>
+  </head>
+  <body></body>
+</html>

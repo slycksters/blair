@@ -4,7 +4,7 @@ import { Navbar } from '../components';
 
 export default function RootLayout() {
   const location = useLocation();
-  const isHome = location.pathname === '/blair';
+  const isHome = ['/blair', '/blair/'].includes(location.pathname);
 
   return (
     <main

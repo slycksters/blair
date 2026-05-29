@@ -1,11 +1,15 @@
 .homePage {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  transform: translateY(clamp(-100px, -6vh, -20px));
+
+  position: relative;
 }
 
 .homePage > * {
@@ -30,7 +34,8 @@
 }
 
 .logo {
-  max-width: 500px;
+  width: clamp(220px, 40vw, 500px);
+  height: auto;
 
   filter: drop-shadow(0 0 12px rgba(220, 230, 255, 0.16))
     drop-shadow(0 10px 25px rgba(0, 0, 0, 0.7));
@@ -43,7 +48,7 @@
 }
 
 .navigationListItem {
-  width: 200px;
+  width: clamp(70px, 18vw, 200px);
 
   display: flex;
   flex-direction: column;
@@ -155,6 +160,32 @@
 
 .disclaimerMessage {
   position: absolute;
-  bottom: 20px;
+  font-size: 12px !important;
+  bottom: 0;
   left: 20px;
+}
+
+@media (max-width: 768px) {
+  .navigationList {
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .navigationListItem a {
+    padding: 14px;
+  }
+
+  .navigationListItem span {
+    font-size: 11px;
+  }
+
+  .navigationListItem img {
+    margin-top: 12px;
+  }
+}
+
+@media (hover: none) {
+  .navigationListItem:hover {
+    transform: none;
+  }
 }

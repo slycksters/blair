@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <nav className={styles.navbar}>
       <figure>
-        <NavLink to="/">
+        <NavLink to="/blair">
           <img alt="logo" className={styles.logo} src={blairLogo} />
         </NavLink>
       </figure>
@@ -14,7 +14,7 @@ export function Navbar() {
       <ul className={styles.navbarList}>
         <li>
           <NavLink
-            to="/ghost-types"
+            to="/blair/ghost-types"
             className={({ isActive }) =>
               isActive ? styles.activeLink : styles.link
             }
@@ -25,7 +25,7 @@ export function Navbar() {
 
         <li>
           <NavLink
-            to="/items"
+            to="/blair/items"
             className={({ isActive }) =>
               isActive ? styles.activeLink : styles.link
             }
@@ -36,7 +36,7 @@ export function Navbar() {
 
         <li>
           <NavLink
-            to="/cursed-objects"
+            to="/blair/cursed-objects"
             className={({ isActive }) =>
               isActive ? styles.activeLink : styles.link
             }
@@ -47,7 +47,7 @@ export function Navbar() {
 
         <li>
           <NavLink
-            to="/guides"
+            to="/blair/guides"
             className={({ isActive }) =>
               isActive ? styles.activeLink : styles.link
             }

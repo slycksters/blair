@@ -3,11 +3,7 @@
   padding: 44px 22px;
 
   background:
-    radial-gradient(
-      circle at top,
-      rgba(217, 31, 63, 0.06),
-      transparent 60%
-    ),
+    radial-gradient(circle at top, rgba(217, 31, 63, 0.06), transparent 60%),
     var(--color-bg-elevated);
 
   margin-top: 50px;
@@ -22,12 +18,15 @@
 
 .title {
   position: absolute;
-  top: -50px;
+  top: -0.5em;
 }
 
 .dataList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(clamp(100px, 12vw, 150px), 1fr)
+  );
   gap: 18px;
 
   padding-top: 34px;
@@ -40,14 +39,13 @@
   border-radius: 8px;
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(30, 20, 20, 0.95),
-      rgba(12, 8, 8, 0.98)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(30, 20, 20, 0.95),
+    rgba(12, 8, 8, 0.98)
+  );
 
-  border: 1px solid rgba(217, 31, 63, 0.10);
+  border: 1px solid rgba(217, 31, 63, 0.1);
 
   box-shadow:
     0 12px 28px rgba(0, 0, 0, 0.6),
@@ -84,23 +82,19 @@
 
   object-fit: cover;
 
-  filter:
-    contrast(1.1)
-    brightness(0.85)
-    saturate(0.9);
+  filter: contrast(1.1) brightness(0.85) saturate(0.9);
 
   transform: scale(1.02);
 
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
 
 .dataListItem:hover .dataListItemImage,
 .dataListItem:focus .dataListItemImage {
   transform: scale(1.2);
-  filter:
-    contrast(1.15)
-    brightness(0.95)
-    saturate(1);
+  filter: contrast(1.15) brightness(0.95) saturate(1);
 }
 
 .itemLabel {
@@ -118,11 +112,7 @@
 
   color: var(--color-gold-100);
 
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(0, 0, 0, 0.85)
-  );
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85));
 
   backdrop-filter: blur(4px);
 

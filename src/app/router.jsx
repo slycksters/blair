@@ -12,7 +12,7 @@ import {
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/blair',
     element: <RootLayout />,
     // errorElement: <NotFound />,
     children: [
@@ -21,23 +21,23 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'ghost-types',
+        path: '/blair/ghost-types',
         element: <GhostTypesPage />,
       },
       {
-        path: 'ghost-types/:name',
+        path: '/blair/ghost-types/:name',
         element: <GhostTypeViewPage />,
       },
       {
-        path: 'items',
+        path: '/blair/items',
         element: <ItemsPage />,
       },
       {
-        path: 'cursed-objects',
+        path: '/blair/cursed-objects',
         element: <CursedObjectsPage />,
       },
       {
-        path: 'guides',
+        path: '/blair/guides',
         element: <GuidesPage />,
       },
     ],

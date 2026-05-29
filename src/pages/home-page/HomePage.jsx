@@ -14,19 +14,19 @@ export function HomePage() {
     <div className={styles.homePage}>
       <figure>
         <img className={styles.logo} src={blairLogo} />
-        <p>Created by: Slyckster x Zazel x 01010011 01101001 01101110</p>
+        {/* <p>Created by: Slyckster x Zazel x 01010011 01101001 01101110</p> */}
       </figure>
 
       <nav className={styles.navigation}>
         <ul className={styles.navigationList}>
           <li className={styles.navigationListItem}>
-            <Link to="/ghost-types">
+            <Link to="/blair/ghost-types">
               <span>Ghost Types</span>
               <img alt="Ghost types image" src={ghostTypesImg} />
             </Link>
           </li>
           <li className={styles.navigationListItem}>
-            <Link to="/items">
+            <Link to="/blair/items">
               <span>Items</span>
               <img
                 alt="Items image"
@@ -36,13 +36,13 @@ export function HomePage() {
             </Link>
           </li>
           <li className={styles.navigationListItem}>
-            <Link to="/cursed-objects">
+            <Link to="/blair/cursed-objects">
               <span>Cursed Objects</span>
               <img alt="Cursed objects image" src={cursedObjectImg} />
             </Link>
           </li>
           <li className={styles.navigationListItem}>
-            <Link to="/guides">
+            <Link to="/blair/guides">
               <span>Guides</span>
               <img alt="Guides image" src={guidesImg} />
             </Link>

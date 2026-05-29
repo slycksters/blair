@@ -11,7 +11,7 @@ export function DataList({ data, title = 'Page Title' }) {
           <Link
             className={styles.dataListItem}
             key={item.id}
-            to={`/ghost-types/${item.slug}`}
+            to={`/blair/ghost-types/${item.slug}`}
           >
             <div className={styles.imageWrapper}>
               <img

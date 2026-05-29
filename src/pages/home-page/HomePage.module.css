@@ -2,6 +2,13 @@
   min-height: 100vh;
   width: 100%;
 
+  position: relative;
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +19,12 @@
   position: relative;
 }
 
-.homePage > * {
+.content > * {
   position: relative;
   z-index: 2;
 }
 
-.homePage figure::before {
+.content figure::before {
   content: '';
   position: absolute;
   inset: -50px;
@@ -161,12 +168,12 @@
 .disclaimerMessage {
   position: absolute;
   font-size: 12px !important;
-  bottom: -40px;
+  bottom: 20px;
   left: 20px;
 }
 
 @media (max-width: 768px) {
-  .homePage {
+  .content {
     justify-content: flex-start;
     transform: none;
 

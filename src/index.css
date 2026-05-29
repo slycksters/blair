@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+@import './assets/stylesheets/color.css';
+@import './assets/stylesheets/typhography.css';
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-app); /* fallback base */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("./assets/img/home-page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.25;
+
+  background-blend-mode: overlay;
+  background-color: rgba(10, 8, 8, 0.4);
+
+  transform: scale(1.05);
+
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(9, 7, 7, 0.6) 75%,
+      rgba(9, 7, 7, 1) 100%
+    ),
+    url("./assets/img/noise.png");
+
+  mix-blend-mode: overlay;
+  opacity: 1;
+
+  z-index: -1;
+  pointer-events: none;
+}

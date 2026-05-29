@@ -1,0 +1,421 @@
+/* =========================================
+   Blair Wiki
+   ========================================= */
+
+/* ======================================================
+   TYPOGRAPHY VARIABLES
+   ====================================================== */
+
+:root {
+  /* ======================================================
+     FONT FAMILIES
+     ====================================================== */
+
+  /* Main headings */
+  --font-heading:
+    'Barlow Condensed',
+    sans-serif;
+
+  /* Atmospheric display/lore text */
+  --font-display:
+    'Cormorant Garamond',
+    serif;
+
+  /* Main readable wiki content */
+  --font-body:
+    'Inter',
+    sans-serif;
+
+  /* Code / technical content */
+  --font-mono:
+    'IBM Plex Mono',
+    monospace;
+
+  /* ======================================================
+     FONT WEIGHTS
+     ====================================================== */
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* ======================================================
+     RESPONSIVE TYPE SCALE
+     ====================================================== */
+
+  --text-xs:
+    clamp(0.72rem, 0.69rem + 0.15vw, 0.82rem);
+
+  --text-sm:
+    clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
+
+  --text-base:
+    clamp(1rem, 0.96rem + 0.25vw, 1.08rem);
+
+  --text-lg:
+    clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
+
+  --text-xl:
+    clamp(1.3rem, 1.15rem + 0.7vw, 1.55rem);
+
+  --text-2xl:
+    clamp(1.6rem, 1.3rem + 1vw, 2rem);
+
+  --text-3xl:
+    clamp(2rem, 1.5rem + 1.5vw, 2.8rem);
+
+  --text-4xl:
+    clamp(2.5rem, 2rem + 2vw, 3.8rem);
+
+  --text-5xl:
+    clamp(3.5rem, 2.8rem + 3vw, 6rem);
+
+  /* ======================================================
+     LINE HEIGHTS
+     ====================================================== */
+
+  --leading-tight: 1;
+  --leading-snug: 1.15;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.85;
+
+  /* ======================================================
+     LETTER SPACING
+     ====================================================== */
+
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.12em;
+
+  /* ======================================================
+     SPACING SYSTEM
+     ====================================================== */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* ======================================================
+     CONTENT WIDTHS
+     ====================================================== */
+
+  --content-width-sm: 640px;
+  --content-width-md: 768px;
+  --content-width-lg: 1024px;
+  --content-width-xl: 1280px;
+
+  /* ======================================================
+     WIKI CONTENT SETTINGS
+     ====================================================== */
+
+  --wiki-line-length: 72ch;
+}
+
+/* ======================================================
+   BASE TYPOGRAPHY
+   ====================================================== */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+
+  color: var(--color-text-primary);
+  background: var(--color-bg-body);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======================================================
+   HEADINGS
+   ====================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wide);
+
+  color: var(--color-text-primary);
+
+  text-transform: uppercase;
+}
+
+/* Main cinematic title */
+h1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-black);
+
+  line-height: 0.9;
+
+  letter-spacing: 0.02em;
+}
+
+/* Section titles */
+h2 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+h5 {
+  font-size: var(--text-xl);
+}
+
+h6 {
+  font-size: var(--text-lg);
+}
+
+/* ======================================================
+   DISPLAY / HERO TEXT
+   ====================================================== */
+
+.display-text {
+  font-family: var(--font-heading);
+
+  font-size: clamp(4rem, 9vw, 8rem);
+
+  font-weight: 900;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.03em;
+
+  text-transform: uppercase;
+
+  color: var(--color-text-primary);
+
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.04),
+    0 0 40px rgba(217, 31, 63, 0.1);
+}
+
+/* ======================================================
+   ATMOSPHERIC LORE TEXT
+   ====================================================== */
+
+.lore-text {
+  font-family: var(--font-display);
+
+  font-size: var(--text-xl);
+
+  line-height: 1.7;
+
+  color: var(--color-text-secondary);
+
+  font-style: italic;
+}
+
+/* ======================================================
+   PARAGRAPHS
+   ====================================================== */
+
+p {
+  margin: 0 0 var(--space-4);
+
+  max-width: var(--wiki-line-length);
+
+  color: var(--color-text-secondary);
+
+  line-height: var(--leading-relaxed);
+}
+
+/* ======================================================
+   WIKI CONTENT
+   ====================================================== */
+
+.wiki-content {
+  font-size: var(--text-base);
+  line-height: 1.85;
+}
+
+.wiki-content p {
+  margin-bottom: var(--space-6);
+}
+
+.wiki-content h2,
+.wiki-content h3,
+.wiki-content h4 {
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-5);
+}
+
+/* ======================================================
+   LISTS
+   ====================================================== */
+
+ul,
+ol {
+  padding-left: 1.5rem;
+
+  color: var(--color-text-secondary);
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+/* ======================================================
+   BLOCKQUOTE
+   ====================================================== */
+
+blockquote {
+  padding-left: var(--space-5);
+  border-left: 3px solid var(--color-primary);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+/* ======================================================
+   CODE
+   ====================================================== */
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+code {
+  padding: 0.15rem 0.4rem;
+
+  border-radius: 0.4rem;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #f3c6d0;
+}
+
+/* ======================================================
+   SMALL TEXT
+   ====================================================== */
+
+small {
+  font-size: var(--text-sm);
+
+  color: var(--color-text-muted);
+}
+
+/* ======================================================
+   FORM ELEMENTS
+   ====================================================== */
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* ======================================================
+   ACCESSIBILITY
+   ====================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* ======================================================
+   RESPONSIVE TYPOGRAPHY
+   ====================================================== */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .wiki-content {
+    line-height: 1.75;
+  }
+
+  h1 {
+    line-height: 0.95;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  .wiki-content {
+    line-height: 1.7;
+  }
+
+  h1 {
+    letter-spacing: 0;
+  }
+}
+
+/* ======================================================
+   TYPOGRAPHY UTILITIES
+   ====================================================== */
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-subtle {
+  color: var(--color-text-subtle);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-shadow-blood {
+  text-shadow:
+    0 0 18px rgba(217, 31, 63, 0.25);
+}
+
+.text-shadow-fog {
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.45);
+}

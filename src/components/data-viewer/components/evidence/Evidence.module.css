@@ -1,0 +1,32 @@
+.evidenceSection {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.evidenceSection h6 {
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.evidenceList {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-secondary);
+  list-style: disc;
+}
+
+.evidenceListItem {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  transition: color 0.2s ease;
+}
+
+.evidenceListItem:hover {
+  color: var(--color-text-primary);
+}

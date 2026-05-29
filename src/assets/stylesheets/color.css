@@ -1,0 +1,273 @@
+/* =========================================
+   Blair Wiki
+   ========================================= */
+
+:root {
+  /* ======================================================
+     CORE BRAND PALETTE
+     ====================================================== */
+
+  /* Blood Crimson */
+  --color-brand-50: #ffe8ea;
+  --color-brand-100: #ffc8cf;
+  --color-brand-200: #ff9aa8;
+  --color-brand-300: #ff6b82;
+  --color-brand-400: #f43f5e;
+  --color-brand-500: #d91f3f;
+  --color-brand-600: #b31733;
+  --color-brand-700: #8c1228;
+  --color-brand-800: #630c1c;
+  --color-brand-900: #3a0610;
+
+  /* Aged Gold / Candlelight */
+  --color-gold-50: #fff8e6;
+  --color-gold-100: #f9e7b0;
+  --color-gold-200: #f2d27c;
+  --color-gold-300: #ddb45d;
+  --color-gold-400: #b58d3f;
+  --color-gold-500: #8f6c2c;
+  --color-gold-600: #6d521f;
+  --color-gold-700: #4d3913;
+  --color-gold-800: #2f2209;
+  --color-gold-900: #1a1204;
+
+  /* Desaturated Bone */
+  --color-bone-50: #f8f5f2;
+  --color-bone-100: #e7dfd8;
+  --color-bone-200: #d3c7bc;
+  --color-bone-300: #b9aa9b;
+  --color-bone-400: #9b8b7d;
+  --color-bone-500: #7b6d62;
+  --color-bone-600: #5f544d;
+  --color-bone-700: #473f3a;
+  --color-bone-800: #2f2a27;
+  --color-bone-900: #1a1715;
+
+  /* Forest Fog */
+  --color-fog-50: #e6ece9;
+  --color-fog-100: #c8d2cd;
+  --color-fog-200: #a7b5ae;
+  --color-fog-300: #84978f;
+  --color-fog-400: #65776f;
+  --color-fog-500: #4a5953;
+  --color-fog-600: #37423d;
+  --color-fog-700: #262f2b;
+  --color-fog-800: #171d1a;
+  --color-fog-900: #0d100f;
+
+  /* ======================================================
+     NEUTRAL SYSTEM
+     Main atmospheric foundation
+     ====================================================== */
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f5f5f5;
+  --color-neutral-100: #e7e7e7;
+  --color-neutral-200: #cfcfcf;
+  --color-neutral-300: #a8a8a8;
+  --color-neutral-400: #7a7a7a;
+  --color-neutral-500: #575757;
+  --color-neutral-600: #393939;
+  --color-neutral-700: #242424;
+  --color-neutral-800: #171717;
+  --color-neutral-900: #0f0d0d;
+  --color-neutral-950: #080707;
+
+  /* ======================================================
+     SEMANTIC COLORS
+     ====================================================== */
+
+  /* Primary */
+  --color-primary: var(--color-brand-500);
+  --color-primary-hover: var(--color-brand-400);
+  --color-primary-active: var(--color-brand-600);
+  --color-primary-soft: rgba(217, 31, 63, 0.12);
+
+  /* Secondary */
+  --color-secondary: var(--color-gold-400);
+  --color-secondary-hover: var(--color-gold-300);
+  --color-secondary-active: var(--color-gold-500);
+  --color-secondary-soft: rgba(181, 141, 63, 0.14);
+
+  /* Accent */
+  --color-accent: #8d6e63;
+  --color-accent-hover: #a1887f;
+  --color-accent-soft: rgba(141, 110, 99, 0.15);
+
+  /* ======================================================
+     BACKGROUNDS
+     ====================================================== */
+
+  --color-bg-app: #090707;
+  --color-bg-body: #0d0b0b;
+  --color-bg-elevated: #141111;
+  --color-bg-surface: #1a1414;
+  --color-bg-surface-hover: #221818;
+  --color-bg-card: #1e1515;
+  --color-bg-card-hover: #271b1b;
+  --color-bg-modal: #120d0d;
+  --color-bg-tooltip: #2a1c1c;
+
+  /* Atmospheric overlays */
+  --color-overlay-dark: rgba(0, 0, 0, 0.72);
+  --color-overlay-soft: rgba(8, 6, 6, 0.55);
+  --color-overlay-blood: rgba(120, 0, 20, 0.18);
+
+  /* ======================================================
+     BORDERS
+     ====================================================== */
+
+  --color-border-primary: #3b2626;
+  --color-border-secondary: #4a2f2f;
+  --color-border-muted: #2a1d1d;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --color-border-accent: rgba(217, 31, 63, 0.45);
+  --color-border-gold: rgba(181, 141, 63, 0.4);
+
+  /* ======================================================
+     TEXT
+     ====================================================== */
+
+  --color-text-primary: #f3efea;
+  --color-text-secondary: #cfc4bb;
+  --color-text-muted: #9b8e84;
+  --color-text-subtle: #776b63;
+  --color-text-disabled: #5e5651;
+
+  --color-text-inverse: #0b0909;
+  --color-text-link: #d85a73;
+  --color-text-link-hover: #ff7c95;
+
+  /* ======================================================
+     STATE COLORS
+     ====================================================== */
+
+  /* Success */
+  --color-success: #4d8b63;
+  --color-success-bg: rgba(77, 139, 99, 0.12);
+  --color-success-border: rgba(77, 139, 99, 0.35);
+
+  /* Warning */
+  --color-warning: #c79845;
+  --color-warning-bg: rgba(199, 152, 69, 0.12);
+  --color-warning-border: rgba(199, 152, 69, 0.35);
+
+  /* Error */
+  --color-error: #c63c50;
+  --color-error-bg: rgba(198, 60, 80, 0.12);
+  --color-error-border: rgba(198, 60, 80, 0.35);
+
+  /* Info */
+  --color-info: #5f7f9c;
+  --color-info-bg: rgba(95, 127, 156, 0.12);
+  --color-info-border: rgba(95, 127, 156, 0.35);
+
+  /* ======================================================
+     INTERACTIVE STATES
+     ====================================================== */
+
+  --color-hover-light: rgba(255, 255, 255, 0.03);
+  --color-hover-medium: rgba(255, 255, 255, 0.06);
+  --color-hover-heavy: rgba(255, 255, 255, 0.1);
+
+  --color-focus-ring: rgba(217, 31, 63, 0.45);
+  --color-selection: rgba(217, 31, 63, 0.3);
+
+  /* ======================================================
+     SHADOWS
+     ====================================================== */
+
+  --shadow-sm:
+    0 2px 4px rgba(0, 0, 0, 0.25);
+
+  --shadow-md:
+    0 4px 10px rgba(0, 0, 0, 0.35);
+
+  --shadow-lg:
+    0 12px 30px rgba(0, 0, 0, 0.45);
+
+  --shadow-blood:
+    0 0 20px rgba(217, 31, 63, 0.18);
+
+  --shadow-candle:
+    0 0 25px rgba(181, 141, 63, 0.16);
+
+  /* ======================================================
+     GRADIENTS
+     ====================================================== */
+
+  --gradient-blood:
+    linear-gradient(
+      135deg,
+      #8c1228 0%,
+      #d91f3f 100%
+    );
+
+  --gradient-fog:
+    linear-gradient(
+      180deg,
+      rgba(18, 14, 14, 0.92) 0%,
+      rgba(7, 6, 6, 1) 100%
+    );
+
+  --gradient-gold:
+    linear-gradient(
+      135deg,
+      #ddb45d 0%,
+      #8f6c2c 100%
+    );
+
+  /* ======================================================
+     COMPONENT TOKENS
+     ====================================================== */
+
+  --navbar-bg: rgba(10, 8, 8, 0.88);
+  --navbar-border: rgba(255, 255, 255, 0.06);
+
+  --card-bg: var(--color-bg-card);
+  --card-border: var(--color-border-primary);
+
+  --input-bg: #161212;
+  --input-border: #3b2929;
+  --input-border-focus: var(--color-primary);
+
+  --table-header-bg: #1f1515;
+  --table-row-hover: rgba(255, 255, 255, 0.03);
+
+  --wiki-sidebar-bg: #120f0f;
+  --wiki-sidebar-border: #2c2020;
+
+  --tooltip-bg: #211616;
+  --tooltip-text: #efe8e0;
+}
+
+/* ======================================================
+   DARK MODE SCROLLBAR
+   ====================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a2323;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a2d2d;
+}
+
+/* ======================================================
+   SELECTION
+   ====================================================== */
+
+::selection {
+  background: var(--color-selection);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,47 @@
+.tipsSection {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.tipsSection h6 {
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.tipsList {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-secondary);
+  list-style: disc;
+}
+
+.tipsListItem {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  transition: color 0.2s ease;
+
+  max-width: 100ch;
+}
+
+.tipsListItem:hover,
+.tipsListItem:hover p {
+  color: var(--color-text-primary);
+}
+
+.tipsListItem p {
+  margin: 0 0 6px 0;
+}
+
+.media {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 300px;
+
+  border-radius: 6px;
+}

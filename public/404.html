@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Get the current URL
+      var l = window.location;
+      
+      // Redirect to your root app, passing the target path in the query string
+      // Replace "/blair/" with whatever your GitHub repository name is if it's different
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/blair/?p=' + l.pathname + l.search + l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

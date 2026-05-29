@@ -13,6 +13,18 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Prevents 404 github page -->
+    <script type="text/javascript">
+      let l = window.location;
+      if (l.search) {
+        let q = new URLSearchParams(l.search);
+        if (q.has('p')) {
+          // Replace the URL in the browser bar without reloading the page
+          window.history.replaceState(null, null, q.get('p') + l.hash);
+        }
+      }
+    </script>
     <script type="module" crossorigin src="/blair/assets/index-B2Ieyigu.js"></script>
     <link rel="stylesheet" crossorigin href="/blair/assets/index-CXDPH3ci.css">
   </head>

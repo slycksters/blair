@@ -201,10 +201,6 @@
   .navigationListItem img {
     margin-top: 12px;
   }
-
-  .disclaimerMessage {
-    bottom: 20px;
-  }
 }
 
 @media (hover: none) {

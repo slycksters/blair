@@ -48,3 +48,9 @@ body::after {
   z-index: -1;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  body::before {
+    opacity: 0.5;
+  }
+}

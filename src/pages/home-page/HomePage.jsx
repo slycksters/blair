@@ -52,12 +52,10 @@ export function HomePage() {
         </nav>
       </div>
 
-      <blockquote
-        className={clsx(styles.disclaimerMessage, 'text-subtle wiki-content')}
-      >
-        Disclaimer: The information presented here is based on personal
+      <span className={clsx(styles.disclaimerMessage, 'text-subtle wiki-content')}>
+        DISCLAIMER: The information presented here is based on personal
         experience. Some details may be inaccurate, outdated, or incomplete.
-      </blockquote>
+      </span>
     </div>
   );
 }

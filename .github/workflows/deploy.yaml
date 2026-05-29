@@ -5,6 +5,14 @@ on:
     branches:
       - main
 
+# FIX 1: Silences the Node.js 20 deprecation warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+# FIX 2: Gives the action permission to push the built website to the gh-pages branch
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

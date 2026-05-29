@@ -1,8 +1,14 @@
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { blairLogo } from '../../assets';
 import styles from './Navbar.module.css';
 
 export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
   return (
     <nav className={styles.navbar}>
       <figure>
@@ -11,6 +17,7 @@ export function Navbar() {
         </NavLink>
       </figure>
 
+      {/* DESKTOP NAV */}
       <ul className={styles.navbarList}>
         <li>
           <NavLink
@@ -22,7 +29,6 @@ export function Navbar() {
             Ghost Types
           </NavLink>
         </li>
-
         <li>
           <NavLink
             to="/blair/items"
@@ -33,7 +39,6 @@ export function Navbar() {
             Items
           </NavLink>
         </li>
-
         <li>
           <NavLink
             to="/blair/cursed-objects"
@@ -44,7 +49,6 @@ export function Navbar() {
             Cursed Objects
           </NavLink>
         </li>
-
         <li>
           <NavLink
             to="/blair/guides"
@@ -56,6 +60,41 @@ export function Navbar() {
           </NavLink>
         </li>
       </ul>
+
+      {/* BURGER ICON */}
+      <button
+        className={styles.burger}
+        onClick={() => setOpen(true)}
+        aria-label="Open menu"
+      >
+        <FaBars />
+      </button>
+
+      {/* FULLSCREEN MOBILE MENU */}
+      {open && (
+        <div className={styles.mobileMenu}>
+          <button
+            className={styles.closeBtn}
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            <FaTimes />
+          </button>
+
+          <NavLink to="/blair/ghost-types" onClick={closeMenu}>
+            Ghost Types
+          </NavLink>
+          <NavLink to="/blair/items" onClick={closeMenu}>
+            Items
+          </NavLink>
+          <NavLink to="/blair/cursed-objects" onClick={closeMenu}>
+            Cursed Objects
+          </NavLink>
+          <NavLink to="/blair/guides" onClick={closeMenu}>
+            Guides
+          </NavLink>
+        </div>
+      )}
     </nav>
   );
 }

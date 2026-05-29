@@ -48,7 +48,7 @@
 }
 
 .navigationListItem {
-  width: clamp(70px, 18vw, 200px);
+  width: clamp(120px, 18vw, 200px);
 
   display: flex;
   flex-direction: column;
@@ -161,14 +161,25 @@
 .disclaimerMessage {
   position: absolute;
   font-size: 12px !important;
-  bottom: 0;
+  bottom: -40px;
   left: 20px;
 }
 
 @media (max-width: 768px) {
+  .homePage {
+    justify-content: flex-start;
+    transform: none;
+
+    padding-top: 32px;
+  }
+
   .navigationList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    margin-top: 18px;
+
+    width: 100%;
+    max-width: 420px;
   }
 
   .navigationListItem a {
@@ -181,6 +192,10 @@
 
   .navigationListItem img {
     margin-top: 12px;
+  }
+
+  .disclaimerMessage {
+    bottom: 20px;
   }
 }
 

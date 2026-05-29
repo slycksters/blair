@@ -38,15 +38,13 @@
 
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.5),
- 
     0 0 18px rgba(217, 31, 63, 0.12);
 }
 
 @media (max-width: 768px) {
   .basicInfoSection {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .image {
@@ -55,14 +53,12 @@
 
     max-width: 110px;
     max-height: 110px;
+
+    order: -1; /* Forces to go to top */
   }
 
   .behaviour {
+    order: 1;
     margin-top: 0;
-    font-size: 14px;
-  }
-
-  .title {
-    top: -30px;
   }
 }

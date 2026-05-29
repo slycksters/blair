@@ -35,9 +35,15 @@ import hallucinationEvent from './ghost-events/hallucination-event.mp4';
 
 // Ghost Traits
 import normalBlink from './ghost-traits/normal-blink.mp4';
+import poltergeistBlink from './ghost-traits/poltergeist-blink.mp4';
 import jiangshiHop from './ghost-traits/jiangshi-hop.mp4';
 import faejkurSoundMimic from './ghost-traits/faejkur-sound-mimick.mp4';
 import faejkurFakeFootsteps from './ghost-traits/faejkur-fake-footsteps.mp4';
+import mareStartingHunt from './ghost-traits/mare-starting-hunt.mp4';
+import phantomThroughCameras from './ghost-traits/phantom-through-cameras.mp4';
+import phantomCameraStun from './ghost-traits/phantom-camera-stun.mp4';
+import poltergeistFlingItems from './ghost-traits/poltergeist-fling-items.mp4';
+import poltergeistInteractions from './ghost-traits/poltergeist-interactions.mp4';
 
 export {
   blairLogo,
@@ -74,4 +80,10 @@ export {
   jiangshiHop,
   faejkurSoundMimic,
   faejkurFakeFootsteps,
+  mareStartingHunt,
+  phantomThroughCameras,
+  phantomCameraStun,
+  poltergeistBlink,
+  poltergeistFlingItems,
+  poltergeistInteractions,
 };

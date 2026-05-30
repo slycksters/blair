@@ -44,6 +44,22 @@ import phantomThroughCameras from './ghost-traits/phantom-through-cameras.mp4';
 import phantomCameraStun from './ghost-traits/phantom-camera-stun.mp4';
 import poltergeistFlingItems from './ghost-traits/poltergeist-fling-items.mp4';
 import poltergeistInteractions from './ghost-traits/poltergeist-interactions.mp4';
+import bansheeTarget from './ghost-traits/banshee-target.mp4';
+import spiritStun from './ghost-traits/spirit-stun.mp4';
+import jiangshiLuigiBoard from './ghost-traits/jiangshi-luigi-board.mp4';
+import yureiBlindness from './ghost-traits/yurei-blindness.mp4';
+import krasueSound from './ghost-traits/krasue-sound.mp3';
+import krasueHeadHunt from './ghost-traits/krasue-head-hunt.mp4';
+import lamentAbility from './ghost-traits/lament-ability.mp4';
+import oniWeakening from './ghost-traits/oni-weakening.mp4';
+import shadeSummoningCircle from './ghost-traits/shade-summoning-circle.mp4';
+import yamaSpiritBox from './ghost-traits/yama-spirit-box.mp3';
+import zozoStare from './ghost-traits/zozo-stare.mp4';
+import zozoScream from './ghost-traits/zozo-scream.mp3';
+import zozoBoard from './ghost-traits/zozo-board.mp4';
+import strigoiHandprint from './ghost-traits/strigoi-handprint.png';
+import fastSaltStep from './ghost-traits/fast-salt-step.mp4';
+import slowSaltStep from './ghost-traits/slow-salt-step.mp4';
 
 export {
   blairLogo,
@@ -86,4 +102,20 @@ export {
   poltergeistBlink,
   poltergeistFlingItems,
   poltergeistInteractions,
+  bansheeTarget,
+  spiritStun,
+  jiangshiLuigiBoard,
+  yureiBlindness,
+  krasueSound,
+  krasueHeadHunt,
+  lamentAbility,
+  oniWeakening,
+  shadeSummoningCircle,
+  yamaSpiritBox,
+  zozoStare,
+  zozoScream,
+  zozoBoard,
+  strigoiHandprint,
+  fastSaltStep,
+  slowSaltStep,
 };

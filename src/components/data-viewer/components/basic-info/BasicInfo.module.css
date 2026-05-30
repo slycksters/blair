@@ -2,63 +2,86 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 14px;
-
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--color-border-subtle);
+  gap: var(--space-8, 2rem);
+  
+  padding-bottom: var(--space-6, 1.5rem);
+  border-bottom: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.06));
 }
 
-/* LEFT SIDE TEXT */
-.behaviour {
+.textContainer {
   flex: 1;
-  margin-top: 20px;
-
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  font-size: 15px;
-
   max-width: 100ch;
 }
 
-/* RIGHT SIDE IMAGE */
-.image {
+.sectionHeading {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-2xl, 1.8rem);
+  color: var(--color-gold-300, #ddb45d);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider, 0.08em);
+  margin-bottom: var(--space-4, 1rem);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Decorative diamond before heading */
+.sectionHeading::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-brand-500, #d91f3f);
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px var(--color-brand-500, #d91f3f);
+}
+
+.behaviour {
+  color: var(--color-text-secondary, #cfc4bb);
+  line-height: var(--leading-relaxed, 1.85);
+  font-size: var(--text-base, 1rem);
+}
+
+.paragraph {
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.imageWrapper {
   flex-shrink: 0;
+  position: relative;
+  padding: 4px;
+  background: var(--color-bg-surface, #1a1414);
+  border: 1px solid var(--color-border-secondary, #4a2f2f);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md, 0 4px 10px rgba(0, 0, 0, 0.35));
+}
 
-  width: 200px;
-  height: 200px;
-
-  max-width: 200px;
-  max-height: 200px;
-
+.image {
+  display: block;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-
   border-radius: 4px;
-
-  border: 1px solid rgba(217, 31, 63, 0.2);
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.5),
-    0 0 18px rgba(217, 31, 63, 0.12);
+  border: 1px solid rgba(217, 31, 63, 0.3);
+  box-shadow: var(--shadow-blood, 0 0 20px rgba(217, 31, 63, 0.18));
 }
 
 @media (max-width: 768px) {
   .basicInfoSection {
-    flex-direction: column;
-    gap: 18px;
+    flex-direction: column-reverse;
+    gap: var(--space-5, 1.25rem);
+  }
+
+  .imageWrapper {
+    align-self: center;
   }
 
   .image {
-    width: 110px;
-    height: 110px;
-
-    max-width: 110px;
-    max-height: 110px;
-
-    order: -1; /* Forces to go to top */
-  }
-
-  .behaviour {
-    order: 1;
-    margin-top: 0;
+    width: 180px;
+    height: 180px;
   }
 }

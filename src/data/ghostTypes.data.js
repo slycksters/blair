@@ -1,6 +1,7 @@
 import {
   bansheeIcon,
   bansheeScream,
+  bansheeTarget,
   demonIcon,
   faejkurFakeFootsteps,
   faejkurIcon,
@@ -9,12 +10,17 @@ import {
   harrowIcon,
   jiangshiHop,
   jiangshiIcon,
+  jiangshiLuigiBoard,
+  krasueHeadHunt,
   krasueIcon,
+  krasueSound,
+  lamentAbility,
   lamentIcon,
   mareIcon,
   mareStartingHunt,
   nookIcon,
   oniIcon,
+  oniWeakening,
   phantomCameraStun,
   phantomIcon,
   phantomThroughCameras,
@@ -24,14 +30,22 @@ import {
   poltergeistInteractions,
   revenantIcon,
   shadeIcon,
+  shadeSummoningCircle,
   spiritIcon,
+  spiritStun,
+  strigoiHandprint,
   strigoiIcon,
   vuultIcon,
   vuultSpammingBreakLights,
   wraithIcon,
   yamaIcon,
+  yamaSpiritBox,
+  yureiBlindness,
   yureiIcon,
+  zozoBoard,
   zozoIcon,
+  zozoScream,
+  zozoStare,
 } from '../assets';
 
 export const GhostTypes = [
@@ -66,6 +80,8 @@ export const GhostTypes = [
       {
         id: 2,
         text: 'When testing for a Banshee, make sure all players are inside the investigation site, as having the target outside can affect the results.',
+        media: bansheeTarget,
+        mediaType: 'video',
       },
       {
         id: 3,
@@ -224,6 +240,8 @@ export const GhostTypes = [
       {
         id: 3,
         text: 'Jiangshi are known to occasionally skip letters when using the Spirit Board, causing incomplete or inconsistent messages.',
+        media: jiangshiLuigiBoard,
+        mediaType: 'video',
       },
       {
         id: 4,
@@ -256,6 +274,8 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'Light many candles near the ghost’s favorite room. If it is a Krasue, it will be forced into its head form and reveal itself.',
+        media: krasueHeadHunt,
+        mediaType: 'video',
       },
       {
         id: 2,
@@ -264,6 +284,12 @@ export const GhostTypes = [
       {
         id: 3,
         text: 'Placing a crucifix in its room will prevent the Krasue from using its appearance change ability.',
+      },
+      {
+        id: 4,
+        text: 'This is what a Krasue sounds like in its head form. If you hear this through a Parabolic Microphone, it confirms that the Krasue is hunting in its head form.',
+        media: krasueSound,
+        mediaType: 'audio',
       },
     ],
   },
@@ -292,6 +318,8 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'The Lament can fake the end of a hunt by turning off all lights and becoming silent, making players think the hunt is over and catching them off guard. There is a low chance the lights will stay on during this ability.',
+        media: lamentAbility,
+        mediaType: 'video',
       },
       {
         id: 2,
@@ -346,12 +374,6 @@ export const GhostTypes = [
       {
         id: 4,
         text: 'The Mare will never turn on lights or activate the fuse.',
-      },
-      {
-        id: 5,
-        text: 'The Mare will never trigger the Hallucination Event.',
-        media: hallucinationEvent,
-        mediaType: 'video',
       },
     ],
   },
@@ -416,6 +438,8 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'Using items like the Incense Burner, Salt, and Crucifix can weaken the Oni, causing it to become slower over time.',
+        media: oniWeakening,
+        mediaType: 'video',
       },
       {
         id: 2,
@@ -581,6 +605,8 @@ export const GhostTypes = [
       {
         id: 2,
         text: 'Shades cannot hunt when summoned with a Summoning Circle. They will appear translucent, stay in the circle for a few seconds, then disappear. However, low sanity from lighting the candles may still trigger a hunt if sanity drops below 35%.',
+        media: shadeSummoningCircle,
+        mediaType: 'video',
       },
       {
         id: 3,
@@ -612,6 +638,8 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'Spirits are more affected by Incense Burners. When stunned, a Spirit will fully stop before slowly regaining speed. The stun duration is 6 seconds, compared to the usual 2 seconds for other ghosts.',
+        media: spiritStun,
+        mediaType: 'video',
       },
       {
         id: 2,
@@ -652,6 +680,8 @@ export const GhostTypes = [
       {
         id: 3,
         text: 'The Strigoi has a unique UV fingerprint of four fingers instead of five, which may appear after door interactions.',
+        media: strigoiHandprint,
+        mediaType: 'image'
       },
     ],
   },
@@ -728,6 +758,8 @@ export const GhostTypes = [
       {
         id: 2,
         text: 'When a Wraith teleports to a player, it may produce an EMF level 2 reading.',
+        media: 'https://www.youtube.com/embed/2d0ApZhc90A',
+        mediaType: 'youtube',
       },
       {
         id: 3,
@@ -775,6 +807,8 @@ export const GhostTypes = [
       {
         id: 4,
         text: 'The Yama has a unique Spirit Box response that sounds like a roar instead of normal responses.',
+        media: yamaSpiritBox,
+        mediaType: 'audio',
       },
       {
         id: 5,
@@ -807,6 +841,8 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'You can test for a Yurei by standing still near a wall away from its path during a hunt with an Incense Burner. If it targets you, it is not a Yurei. If it ignores you, it may be a Yurei.',
+        media: yureiBlindness,
+        mediaType: 'video',
       },
       {
         id: 2,
@@ -847,10 +883,14 @@ export const GhostTypes = [
       {
         id: 1,
         text: 'During hunts, listen for the ZoZo’s scream. This happens when a player stares at it for too long and can help identify the ghost.',
+        media: zozoScream,
+        mediaType: 'audio',
       },
       {
         id: 2,
         text: 'When using a Spirit Board, watch for its special behavior where letters turn red and it keeps spelling “ZoZo,” refusing to turn off.',
+        media: zozoBoard,
+        mediaType: 'video',
       },
       {
         id: 3,
@@ -859,6 +899,8 @@ export const GhostTypes = [
       {
         id: 4,
         text: 'You can infinitely slow Zozo without it activating its ability by only looking at it for 2 seconds, then quickly moving your gaze away so it is no longer on screen, and then quickly looking back at it again. This resets the Zozo’s meter that triggers its ability.',
+        media: zozoStare,
+        mediaType: 'video',
       },
     ],
   },

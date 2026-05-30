@@ -6,7 +6,6 @@ import styles from './Navbar.module.css';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-
   const closeMenu = () => setOpen(false);
 
   return (
@@ -31,6 +30,16 @@ export function Navbar() {
         </li>
         <li>
           <NavLink
+            to="/blair/guides"
+            className={({ isActive }) =>
+              isActive ? styles.activeLink : styles.link
+            }
+          >
+            Guides
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/blair/items"
             className={({ isActive }) =>
               isActive ? styles.activeLink : styles.link
@@ -47,16 +56,6 @@ export function Navbar() {
             }
           >
             Cursed Objects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/blair/guides"
-            className={({ isActive }) =>
-              isActive ? styles.activeLink : styles.link
-            }
-          >
-            Guides
           </NavLink>
         </li>
       </ul>

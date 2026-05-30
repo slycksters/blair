@@ -1,0 +1,262 @@
+/* =========================================
+   Guides Page Styles
+   Utilizes the global Blair Wiki variables
+   ========================================= */
+
+.guidesPage {
+  position: relative;
+  padding: var(--space-8) var(--space-6);
+  margin-top: 50px;
+  background: 
+    radial-gradient(circle at top, rgba(217, 31, 63, 0.08), transparent 60%),
+    var(--color-bg-elevated, #141111);
+  border: 1px solid var(--color-border-muted, #2a1d1d);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg, 0 12px 30px rgba(0, 0, 0, 0.45));
+  color: var(--color-text-primary, #f3efea);
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+/* --- HEADER --- */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.pageTitle {
+  position: absolute;
+  top: -0.5em;
+}
+
+.mainHeading {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-4xl, 3rem);
+  color: var(--color-gold-200, #f2d27c);
+  margin-bottom: var(--space-2);
+  text-shadow: var(--shadow-candle, 0 0 25px rgba(181, 141, 63, 0.16));
+}
+
+.author {
+  color: var(--color-text-muted, #9b8e84);
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size: var(--text-sm, 0.85rem);
+}
+
+/* --- CONTENT SECTIONS --- */
+.contentContainer {
+  max-width: var(--content-width-lg, 1024px);
+  margin: 0 auto;
+}
+
+.introCard {
+  background: var(--color-bg-surface, #1a1414);
+  border-left: 4px solid var(--color-brand-500, #d91f3f);
+  padding: var(--space-5);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: var(--space-8);
+  font-size: var(--text-base, 1rem);
+  line-height: var(--leading-relaxed, 1.85);
+}
+
+.introCard p {
+  margin-bottom: var(--space-3);
+  color: var(--color-text-secondary, #cfc4bb);
+}
+
+.introHighlight {
+  color: var(--color-gold-100, #f9e7b0) !important;
+  font-style: italic;
+}
+
+/* --- METHODS GRID --- */
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.methodCard {
+  background: var(--color-bg-card, #1e1515);
+  border: 1px solid var(--color-border-secondary, #4a2f2f);
+  border-radius: 8px;
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0, 0, 0, 0.25));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.methodCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 10px rgba(0, 0, 0, 0.35));
+  border-color: var(--color-gold-500, #8f6c2c);
+}
+
+.methodTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-xl, 1.5rem);
+  color: var(--color-text-primary, #f3efea);
+  margin-bottom: var(--space-4);
+}
+
+.methodBadge {
+  align-self: flex-start;
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: bold;
+  background: var(--color-info-bg, rgba(95, 127, 156, 0.12));
+  color: var(--color-info, #5f7f9c);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-info-border, rgba(95, 127, 156, 0.35));
+}
+
+.methodDesc {
+  color: var(--color-text-muted, #9b8e84);
+  font-size: var(--text-sm, 0.9rem);
+  margin-bottom: var(--space-4);
+}
+
+.methodList {
+  list-style-type: square;
+  color: var(--color-text-secondary, #cfc4bb);
+  padding-left: var(--space-5);
+}
+
+.methodList li {
+  margin-bottom: var(--space-2);
+}
+
+/* --- DETAILED CHECKS --- */
+.sectionHeader {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-3xl, 2.5rem);
+  color: var(--color-gold-300, #ddb45d);
+  text-align: center;
+  margin: var(--space-12) 0 var(--space-8);
+  border-bottom: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.06));
+  padding-bottom: var(--space-4);
+}
+
+.checkSection {
+  background: var(--color-bg-surface, #1a1414);
+  border: 1px solid var(--color-border-primary, #3b2626);
+  border-radius: 8px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.checkTitle {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-2xl, 1.8rem);
+  color: var(--color-success, #4d8b63);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.checkTitle::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: var(--color-success, #4d8b63);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-success, #4d8b63);
+}
+
+.checkDesc {
+  color: var(--color-text-muted, #9b8e84);
+  margin-bottom: var(--space-5);
+  font-style: italic;
+}
+
+.listTitle {
+  font-size: var(--text-lg, 1.1rem);
+  color: var(--color-brand-200, #ff9aa8);
+  margin: var(--space-5) 0 var(--space-3);
+}
+
+.splitLists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.ghostList {
+  list-style: none;
+  padding: 0;
+  color: var(--color-text-secondary, #cfc4bb);
+}
+
+.ghostList li {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-4);
+  position: relative;
+  line-height: var(--leading-normal, 1.6);
+}
+
+.ghostList li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--color-gold-500, #8f6c2c);
+  font-size: 0.8em;
+}
+
+.ghostName {
+  font-weight: var(--font-bold, 700);
+  color: var(--color-gold-200, #f2d27c);
+  letter-spacing: var(--tracking-wide, 0.04em);
+}
+
+/* --- MEDIA STYLES --- */
+.media {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: var(--space-3) 0 var(--space-3) 0;
+  border: 1px solid var(--color-border-secondary, #4a2f2f);
+  box-shadow: var(--shadow-blood, 0 0 20px rgba(217, 31, 63, 0.18));
+  background: #000;
+}
+
+.mediaAudio {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: var(--space-2) 0;
+  border-radius: 30px;
+}
+
+/* --- UTILITIES --- */
+.link {
+  color: var(--color-text-link, #d85a73);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-text-link-hover, #ff7c95);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .guidesPage {
+    padding: var(--space-5) var(--space-4);
+  }
+  
+  .splitLists {
+    grid-template-columns: 1fr;
+  }
+  
+  .mainHeading {
+    font-size: var(--text-3xl, 2.2rem);
+  }
+}

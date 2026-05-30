@@ -24,3 +24,10 @@
   position: absolute;
   top: -0.5em;
 }
+
+.dataViewerContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8, 2rem);
+  margin-top: var(--space-4, 1rem);
+}

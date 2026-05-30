@@ -1,0 +1,10 @@
+.link {
+  color: var(--color-text-link, #d85a73);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-text-link-hover, #ff7c95);
+}

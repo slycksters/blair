@@ -27,6 +27,12 @@ export function HomePage() {
               </Link>
             </li>
             <li className={styles.navigationListItem}>
+              <Link to="/blair/guides">
+                <span>Guides</span>
+                <img alt="Guides image" src={guidesImg} />
+              </Link>
+            </li>
+            <li className={styles.navigationListItem}>
               <Link to="/blair/items">
                 <span>Items</span>
                 <img
@@ -40,12 +46,6 @@ export function HomePage() {
               <Link to="/blair/cursed-objects">
                 <span>Cursed Objects</span>
                 <img alt="Cursed objects image" src={cursedObjectImg} />
-              </Link>
-            </li>
-            <li className={styles.navigationListItem}>
-              <Link to="/blair/guides">
-                <span>Guides</span>
-                <img alt="Guides image" src={guidesImg} />
               </Link>
             </li>
           </ul>

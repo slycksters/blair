@@ -1,32 +1,53 @@
 .evidenceSection {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-6, 1.5rem);
+  border-bottom: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.06));
 }
 
-.evidenceSection h6 {
-  margin: 0 0 10px 0;
-  letter-spacing: 2px;
+.sectionHeading {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: var(--text-2xl, 1.8rem);
+  color: var(--color-info, #5f7f9c);
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  letter-spacing: var(--tracking-wider, 0.08em);
+  margin-bottom: var(--space-4, 1rem);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionHeading::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-info, #5f7f9c);
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px var(--color-info, #5f7f9c);
 }
 
 .evidenceList {
   margin: 0;
-  padding-left: 18px;
-  color: var(--color-text-secondary);
-  list-style: disc;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3, 0.75rem);
 }
 
 .evidenceListItem {
-  margin-bottom: 6px;
-
-  font-size: 14px;
-  line-height: 1.5;
-
-  transition: color 0.2s ease;
+  background: var(--color-bg-surface, #1a1414);
+  color: var(--color-text-secondary, #cfc4bb);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-primary, #3b2626);
+  font-size: var(--text-sm, 0.95rem);
+  font-weight: var(--font-medium, 500);
+  transition: all 0.2s ease;
 }
 
 .evidenceListItem:hover {
-  color: var(--color-text-primary);
+  color: var(--color-text-primary, #ffffff);
+  border-color: var(--color-info, #5f7f9c);
+  background: var(--color-info-bg, rgba(95, 127, 156, 0.12));
+  transform: translateY(-2px);
 }

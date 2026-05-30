@@ -3,7 +3,7 @@ import styles from './Evidence.module.css';
 export function Evidence({ data }) {
   return (
     <section className={styles.evidenceSection}>
-      <h6>Evidences</h6>
+      <h2 className={styles.sectionHeading}>Evidence</h2>
 
       <ul className={styles.evidenceList}>
         {data.evidences.map((item) => (

@@ -29,7 +29,7 @@ import yureiIcon from './img/yurei-icon.png';
 import zozoIcon from './img/zozo-icon.png';
 
 // Ghost Events
-import bansheeScream from './ghost-events/banshee-scream.mp3';
+import bansheeScream from './ghost-events/banshee-scream.MP3';
 import vuultSpammingBreakLights from './ghost-events/vuult-spamming-break-lights.mp4';
 import hallucinationEvent from './ghost-events/hallucination-event.mp4';
 
@@ -48,14 +48,14 @@ import bansheeTarget from './ghost-traits/banshee-target.mp4';
 import spiritStun from './ghost-traits/spirit-stun.mp4';
 import jiangshiLuigiBoard from './ghost-traits/jiangshi-luigi-board.mp4';
 import yureiBlindness from './ghost-traits/yurei-blindness.mp4';
-import krasueSound from './ghost-traits/krasue-sound.mp3';
+import krasueSound from './ghost-traits/krasue-sound.MP3';
 import krasueHeadHunt from './ghost-traits/krasue-head-hunt.mp4';
 import lamentAbility from './ghost-traits/lament-ability.mp4';
 import oniWeakening from './ghost-traits/oni-weakening.mp4';
 import shadeSummoningCircle from './ghost-traits/shade-summoning-circle.mp4';
-import yamaSpiritBox from './ghost-traits/yama-spirit-box.mp3';
+import yamaSpiritBox from './ghost-traits/yama-spirit-box.MP3';
 import zozoStare from './ghost-traits/zozo-stare.mp4';
-import zozoScream from './ghost-traits/zozo-scream.mp3';
+import zozoScream from './ghost-traits/zozo-scream.MP3';
 import zozoBoard from './ghost-traits/zozo-board.mp4';
 import strigoiHandprint from './ghost-traits/strigoi-handprint.png';
 import fastSaltStep from './ghost-traits/fast-salt-step.mp4';

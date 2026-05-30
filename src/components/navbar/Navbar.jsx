@@ -83,14 +83,14 @@ export function Navbar() {
           <NavLink to="/blair/ghost-types" onClick={closeMenu}>
             Ghost Types
           </NavLink>
+          <NavLink to="/blair/guides" onClick={closeMenu}>
+            Guides
+          </NavLink>
           <NavLink to="/blair/items" onClick={closeMenu}>
             Items
           </NavLink>
           <NavLink to="/blair/cursed-objects" onClick={closeMenu}>
             Cursed Objects
-          </NavLink>
-          <NavLink to="/blair/guides" onClick={closeMenu}>
-            Guides
           </NavLink>
         </div>
       )}

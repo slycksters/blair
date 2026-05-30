@@ -29,7 +29,7 @@ import yureiIcon from './img/yurei-icon.png';
 import zozoIcon from './img/zozo-icon.png';
 
 // Ghost Events
-import bansheeScream from './ghost-events/banshee-scream.MP3';
+import bansheeScream from './ghost-events/banshee-scream.mp3';
 import vuultSpammingBreakLights from './ghost-events/vuult-spamming-break-lights.mp4';
 import hallucinationEvent from './ghost-events/hallucination-event.mp4';
 
